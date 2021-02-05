@@ -11,6 +11,7 @@
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, .12);
+  margin-top:30px;
 }
 
 .content {
@@ -83,7 +84,7 @@ h4 {
 
 
 
-<span id="out">fff</span>
+<span id="out"></span>
 <script>
 
 var start = ['我覺得','我認為','我的感想就是','我的心得就是','我感覺'] ;
@@ -104,7 +105,7 @@ function ggggggg() {
 var txt = document.querySelector('#input').value ;
 
 var outc = start[Math.ceil(Math.random()*start.length-1)] + bt[Math.ceil(Math.random()*bt.length-1)] + txt + bts[Math.ceil(Math.random()*bts.length-1)] + btst[Math.ceil(Math.random()*btst.length-1)] + '，' + end[Math.ceil(Math.random()*end.length-1)] + txt + ends[Math.ceil(Math.random()*ends.length-1)] + as[Math.ceil(Math.random()*as.length-1)] + '：「' + txtlist[Math.ceil(Math.random()*txtlistl)] + '」' + ss[Math.ceil(Math.random()*ss.length-1)] + '。' ;
-$('#out').append('<div class="card t"><div class="content"><h4>' + txt + '</h4><div class="description">' + outc + '</div></div></div>');
+$('#out').prepend('<div class="card t"><div class="content"><h4>' + txt + '</h4><div class="description">' + outc + '</div></div></div>');
 }
 $(".btn").click(function () {
 ggggggg();
