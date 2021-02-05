@@ -2,14 +2,44 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 <title>心得產生器</title>
 <style>
+body {
+  background-color: #f6f6f6;
+  font-family: Helvetica;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+}
 
+.card {
+  width: 320px;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, .12);
+}
+
+.content {
+  padding: 2rem 1.8rem;
+}
+
+h4 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
 * {
   outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .topic {
-  width: 95%;
-  max-width: 320px;
+  width: 320px;
   height: 80px;
   background: #f2f2f2;
   border-radius: 12px;
@@ -80,8 +110,8 @@ function ggggggg() {
 
 var txt = document.querySelector('#input').value ;
 
-document.querySelector('#out').innerHTML = start[Math.ceil(Math.random()*start.length-1)] + bt[Math.ceil(Math.random()*bt.length-1)] + txt + bts[Math.ceil(Math.random()*bts.length-1)] + btst[Math.ceil(Math.random()*btst.length-1)] + '，' + end[Math.ceil(Math.random()*end.length-1)] + txt + ends[Math.ceil(Math.random()*ends.length-1)] + as[Math.ceil(Math.random()*as.length-1)] + '：「' + txtlist[Math.ceil(Math.random()*txtlistl)] + '」' + ss[Math.ceil(Math.random()*ss.length-1)] + '。' ;
-
+var outc = start[Math.ceil(Math.random()*start.length-1)] + bt[Math.ceil(Math.random()*bt.length-1)] + txt + bts[Math.ceil(Math.random()*bts.length-1)] + btst[Math.ceil(Math.random()*btst.length-1)] + '，' + end[Math.ceil(Math.random()*end.length-1)] + txt + ends[Math.ceil(Math.random()*ends.length-1)] + as[Math.ceil(Math.random()*as.length-1)] + '：「' + txtlist[Math.ceil(Math.random()*txtlistl)] + '」' + ss[Math.ceil(Math.random()*ss.length-1)] + '。' ;
+$('#out').append('<div class="card"><div class="content"><h4>' + txt + '</h4><div class="description">' + outc + '</div></div></div>');
 }
 $(".btn").click(function () {
 ggggggg();
