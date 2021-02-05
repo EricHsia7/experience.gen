@@ -106,6 +106,8 @@ var txt = document.querySelector('#input').value ;
 
 var outc = start[Math.ceil(Math.random()*start.length-1)] + bt[Math.ceil(Math.random()*bt.length-1)] + txt + bts[Math.ceil(Math.random()*bts.length-1)] + btst[Math.ceil(Math.random()*btst.length-1)] + '，' + end[Math.ceil(Math.random()*end.length-1)] + txt + ends[Math.ceil(Math.random()*ends.length-1)] + as[Math.ceil(Math.random()*as.length-1)] + '：「' + txtlist[Math.ceil(Math.random()*txtlistl)] + '」' + ss[Math.ceil(Math.random()*ss.length-1)] + '。' ;
 $('#out').prepend('<div class="card t"><div class="content"><h4>' + txt + '</h4><div class="description">' + outc + '</div></div></div>');
+document.querySelector('#input').value = '' ;
+  $('.topic input').blur();
 }
 $(".btn").click(function () {
 ggggggg();
